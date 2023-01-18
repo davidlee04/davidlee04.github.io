@@ -1,0 +1,118 @@
+body {
+    /* background: rgb(58, 175, 169); */
+    background-image: linear-gradient(to right top, rgb(0, 63, 60),rgb(80, 197, 191));
+    background-attachment: fixed;
+}
+#card {
+    background: rgb(222, 242, 241);
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    position: relative;
+    outline: 2px solid gray;
+    animation: enlargeRev 0.5s;
+}
+#card:hover {
+    box-shadow: 2.5px 2.5px 10px 2px rgb(0, 63, 60);
+    animation:enlarge 0.5s ease forwards;
+}
+.p1 {
+    font-family: "Apercu";
+    font-size: 1.2em;
+    font-size: 1.25vw;
+    color: rgb(23, 37, 42);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* position: absolute; */
+}
+.p2 {
+    font-family: "Apercu Bold";
+    color: white;
+    font-size: 3em;
+    font-size: 6vw;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    line-height: 5vw;
+    animation:breath 1.7s linear infinite;
+}
+body > h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+#hc {
+    border-radius:100%;
+    border:0;
+    display:flex;
+    margin:auto;
+    width:20vw;
+    height:20vw;
+    position:relative;
+    /* animation: rotate 20s li near infinite; */
+}
+#hc:before{
+    position:absolute;
+    content:"";
+    border-radius:100%;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    border:3.5px dashed rgb(18, 105, 100);
+    animation: rotate 30s linear infinite;
+}
+#house {
+    /* position:absolute; */
+    margin:auto;
+    /* display:block; */
+    display:block;
+    width:20vw;
+    height:20vw;
+}
+
+@font-face {
+    font-family: "Apercu";
+    src: url("Apercu\ Regular.otf");
+}
+@font-face {
+    font-family: "Apercu Bold";
+    src: url("Apercu Pro Bold.otf");
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes enlarge {
+    100% {
+        transform: scaleX(1.1) scaleY(1.1);
+    }
+}
+@keyframes enlargeRev {
+    0% {
+        transform: scaleX(1.1) scaleY(1.1);
+    }
+    100% {
+        transform: scaleX(1) scaleY(1);
+    }
+}
+
+@keyframes breath {
+    0% {
+        transform: scaleX(1) scaleY(1);
+    }
+    50% {
+        transform: scaleX(1.1) scaleY(1.1);
+    }
+    100% {
+        transform: scaleX(1) scaleY(1);
+    }
+}
